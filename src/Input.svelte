@@ -2,5 +2,17 @@
     let country = 'uganda';
 </script>
 
-<input bind:value={country} />
-<img src='https://www.dropbox.com/s/k8l1qinmln3oyr6/{country}.png?dl=0' alt='flag of {country}'/>
+<style>
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+    img, input {
+        width: 200px;
+    }
+</style>
+
+<div>
+    <input bind:value={country} />
+    <img src='https://raw.githubusercontent.com/Treblesteph/svelte-playing/master/src/flags/{country}.png' alt='flag of {country}'/>
+</div>
