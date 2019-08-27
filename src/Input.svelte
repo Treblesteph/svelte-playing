@@ -5,6 +5,7 @@
 <style>
     div {
         display: flex;
+        align-items: center;
         flex-direction: column;
     }
     img, input {

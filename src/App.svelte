@@ -6,6 +6,7 @@
 <style>
 	h1 {
 		color: purple;
+		text-align: center;
 	}
 </style>
 
