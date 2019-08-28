@@ -1,5 +1,5 @@
 <script>
-	import Input from './Input.svelte';
+	import Flag from './Flag.svelte';
 	export let name;
 </script>
 
@@ -11,4 +11,4 @@
 </style>
 
 <h1>Hello {name}!</h1>
-<Input />
+<Flag />
