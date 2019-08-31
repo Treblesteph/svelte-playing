@@ -1,5 +1,16 @@
 <script>
-    let country = 'uganda';
+    import { Countries } from './Countries.js';
+    import { getUnique, shuffle, stripString } from './Utils.js';
+
+    const indexOfAnswer = Math.floor(Math.random()*Countries.length);
+    const answer = Countries[indexOfAnswer];
+    const country = stripString(answer)
+    let guess;
+    let difficult = false;
+    Countries.splice(indexOfAnswer, 1)
+
+    let options = [answer, ...getUnique(Countries, 3)]
+    shuffle(options)
 </script>
 
 <style>
