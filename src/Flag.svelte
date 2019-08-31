@@ -19,7 +19,7 @@
         align-items: center;
         flex-direction: column;
     }
-    img, input {
+    img, input.answer {
         border: 2px solid #efede6;
         width: 200px;
     }
