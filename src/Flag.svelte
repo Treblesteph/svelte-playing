@@ -32,8 +32,8 @@
     }
     .switch {
         position: absolute;
-        right: 3em;
-        top: 3em;
+        right: 9em;
+        bottom: 10em;
         display: inline-block;
         width: 40px;
         height: 20px;
