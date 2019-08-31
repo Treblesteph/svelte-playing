@@ -78,6 +78,34 @@
 </style>
 
 <div>
-    <input bind:value={country} />
-    <img src='https://raw.githubusercontent.com/Treblesteph/svelte-playing/master/src/flags/{country.toLowerCase().split(" ").join("")}.png' alt='flag of {country}'/>
+    <img src='https://raw.githubusercontent.com/Treblesteph/svelte-playing/master/src/flags/{country}.png' alt='flag of {country}'/>
+    <!-- <input class='answer' bind:value={answer} /> -->
+    <form>
+        {#if !difficult}
+            {#each options as option}
+                <label>
+                    <input type=radio bind:group={guess} value={option} />
+                    {option}
+                </label>
+            {/each}
+        {:else}
+            <input class='answer' placeholder='enter your guess' bind:value={guess}/>
+        {/if}
+    </form>
+    {#if guess}
+        <p>You have guessed {guess}...</p>
+        {#if stripString(guess) === stripString(answer)}
+            <p class='correct'>✅ that is correct!</p>
+            <button value="Next Flag" onClick="window.location.reload();">Next Flag</button>
+        {:else}
+            <p class='incorrect'>❌ that is incorrect try again!</p>
+        {/if}
+    {:else}
+        <label class="switch"> 
+            <input type=checkbox bind:checked={difficult} />
+            <span class="knob"></span>
+            <br>
+            <p>toggle impossible mode</p>
+        </label>
+    {/if}
 </div>
