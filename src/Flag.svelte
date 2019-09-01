@@ -13,7 +13,6 @@
     let options;
 
     const nextFlag = () => {
-        console.log('next')
         const countries = [...Countries];
         const indexOfAnswer = Math.floor(Math.random()*countries.length);
         answer = countries[indexOfAnswer];
