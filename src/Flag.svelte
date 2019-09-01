@@ -37,7 +37,6 @@
 </style>
 
 <div>
-    <p>{answer}</p>
     <Question
         answer={answer}
         difficult={difficult}
