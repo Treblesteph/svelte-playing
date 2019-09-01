@@ -12,8 +12,18 @@
     let answer;
     let options;
 
-    let options = [answer, ...getUnique(Countries, 3)]
-    shuffle(options)
+    const nextFlag = () => {
+        console.log('next')
+        const countries = [...Countries];
+        const indexOfAnswer = Math.floor(Math.random()*countries.length);
+        answer = countries[indexOfAnswer];
+        let answercorrect;
+        countries.splice(indexOfAnswer, 1)
+        options = [answer, ...getUnique(countries, 3)]
+        shuffle(options)
+        guess = undefined;
+    }
+    nextFlag()
 </script>
 
 <style>
