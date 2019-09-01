@@ -38,7 +38,6 @@
     <Question
         answer={answer}
         difficult={difficult}
-        handleSubmit={nextFlag}
         options={options}
         bind:value={guess}
     />

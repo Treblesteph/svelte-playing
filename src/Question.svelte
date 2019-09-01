@@ -3,8 +3,7 @@
     
     export let answer;
     export let difficult;
-    export let handleSubmit;
-    export let value = undefined;
+    export let value = '';
     export let options;
 
     $: country = stripString(answer)
@@ -19,7 +18,7 @@
 </style>
 
 <img src='https://raw.githubusercontent.com/Treblesteph/svelte-playing/master/src/flags/{country}.png' alt='flag of {country}'/>
-<form on:submit={handleSubmit}>
+<form on:submit={e => e.preventDefault()}>
     {#if !difficult}
         {#each options as option}
             <label>
