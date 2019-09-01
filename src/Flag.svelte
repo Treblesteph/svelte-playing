@@ -7,10 +7,13 @@
     import Toggle from './Toggle.svelte';
 
     let difficult;
-    let percent = 40;
+    let correctcount = 5;
+    let answeredcount = 10;
     let guess;
     let answer;
     let options;
+
+    $: percent = answeredcount === 0 ? 0 : Math.round(100*correctcount/answeredcount)
 
     const nextFlag = () => {
         const countries = [...Countries];
@@ -51,5 +54,5 @@
     {:else}
         <Toggle bind:difficulty={difficult}/>
     {/if}
-    <Percent percent={percent} />
+    <!-- <Percent percent={percent} /> -->
 </div>
