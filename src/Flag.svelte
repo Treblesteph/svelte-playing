@@ -20,7 +20,7 @@
         countries.splice(indexOfAnswer, 1)
         options = [answer, ...getUnique(countries, 3)]
         shuffle(options)
-        guess = undefined;
+        guess = '';
     }
     nextFlag()
 </script>
