@@ -1,6 +1,10 @@
 <script>
     import { Countries } from './Countries.js';
-    import { getUnique, shuffle, stripString } from './Utils.js';
+    import { getUnique, shuffle } from './Utils.js';
+    import Answer from './Answer.svelte';
+    import Percent from './Percent.svelte';
+    import Question from './Question.svelte';
+    import Toggle from './Toggle.svelte';
 
     const indexOfAnswer = Math.floor(Math.random()*Countries.length);
     const answer = Countries[indexOfAnswer];
