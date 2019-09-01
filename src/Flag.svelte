@@ -6,12 +6,11 @@
     import Question from './Question.svelte';
     import Toggle from './Toggle.svelte';
 
-    const indexOfAnswer = Math.floor(Math.random()*Countries.length);
-    const answer = Countries[indexOfAnswer];
-    const country = stripString(answer)
+    let difficult;
+    let percent = 40;
     let guess;
-    let difficult = false;
-    Countries.splice(indexOfAnswer, 1)
+    let answer;
+    let options;
 
     let options = [answer, ...getUnique(Countries, 3)]
     shuffle(options)
